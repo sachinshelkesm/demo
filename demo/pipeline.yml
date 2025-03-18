@@ -2,7 +2,7 @@ resources:
   - name: git-repo
     type: git
     source:
-      uri: <your-git-repo-url> # e.g., https://github.com/yourusername/my-app.git
+      uri: https://github.com/sachinshelkesm/demo.git # e.g., https://github.com/yourusername/my-app.git
       branch: main
  
 jobs:
