@@ -2,11 +2,11 @@ resources:
   - name: git-repo
     type: git
     source:
-      uri: https://github.com/sachinshelkesm/demo.git # e.g., https://github.com/yourusername/my-app.git
+      uri: https://github.com/sachinshelkesm/demo.git
       branch: main
- 
+
 jobs:
-  - name: test
+  - name: build-and-test
     plan:
       - get: git-repo
         trigger: true
@@ -15,7 +15,7 @@ jobs:
           platform: linux
           image_resource:
             type: docker-image
-            source: { repository: gradle, tag: jdk17 }
+            source: { repository: gradle, tag: latest }
           inputs:
             - name: git-repo
           run:
